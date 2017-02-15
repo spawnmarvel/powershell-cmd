@@ -4,7 +4,7 @@ $Now = Get-Date;
 #----- define amount of days ----#
 $Days = 40;
 #----- define folder where files are located ----#
-$TargetFolder = "C:\Backup\farm";
+$TargetFolder = "C:\Backup\myBck";
 #----- define extension ----#"*.log, *.txt, or all *"
 $Extension = "*";
 #----- define LastWriteTime parameter based on $Days ---#
