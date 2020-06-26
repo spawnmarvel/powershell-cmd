@@ -31,6 +31,14 @@ Set-ExecutionPolicy RemoteSigned
 ```ps1
 Get-Help
 ```
+#### Parameter
+```ps1
+Get-Service -Name W*
+```
+#### If you forget a cmdlet’s parameters, just use a script like the following, which will display the parameters for the Get-Process cmdlet:
+```ps1
+Get-Process | Get-Member
+```
 
 ## CMD
 Uptime:

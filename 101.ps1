@@ -3,3 +3,6 @@ Get-Process
 Get-Service
 Get-Content
 
+Get-Service -Name W*
+
+
