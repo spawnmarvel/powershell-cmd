@@ -1,5 +1,6 @@
 # POWERSHELL / CMD
 
+#### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
 ## CMD
 Uptime:
 ``` CMD
