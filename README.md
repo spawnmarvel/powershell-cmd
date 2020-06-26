@@ -1,4 +1,4 @@
-# POWERSHELL / CMD
+# POWERSHELL
 
 #### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
 #### PowerShell scripts are stored in.ps1 files. 
@@ -9,6 +9,10 @@
 * RemoteSigned— You can run your own scripts or scripts signed by a trusted developer.
 * Unrestricted— You can run any script you want.
 
+#### To start working with ps1
+```ps1 
+Set-ExecutionPolicy RemoteSigned
+```
 
 
 ## CMD
