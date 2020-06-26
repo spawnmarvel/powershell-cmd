@@ -3,6 +3,9 @@
 #### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
 #### PowerShell scripts are stored in.ps1 files. 
 #### In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
+```ps1
+Get-ExecutionPolicy
+```
 
 * Restricted— No scripts are allowed. This is the default setting, so you will see it the first time you run the command.
 * AllSigned— You can run scripts signed by a trusted developer. With this setting in place, before executing, a script will ask you to confirm that you want to run it.
