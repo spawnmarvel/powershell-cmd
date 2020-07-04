@@ -67,7 +67,7 @@ REM /sec copy files with SECurity
 REM /secfix fix file SECurity on all files, even skipped files
 REM /timfix fix file TIMes on all files, even skipped
 
-REM Share\drive
+REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
 robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix
 net use z: /del
