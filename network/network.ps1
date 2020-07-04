@@ -2,13 +2,10 @@
 $machine_adr = @("10.....", "10.......")
 $count = 0
 try {
-
-
     for ($i = 0; $i -lt $machine_adr.length; $i++) {
         "Adr " + $machine_adr[$i]
         $rv= New-Object System.Net.Sockets.TcpClient($machine_adr[$i], 8080)
         $count++
-
     }
 }
 catch {
