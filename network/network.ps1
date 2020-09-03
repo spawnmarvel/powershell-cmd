@@ -1,6 +1,6 @@
 # loop, https://powertoe.wordpress.com/2009/12/14/powershell-part-4-arrays-and-for-loops/
 $machine_adr = @("10.....", "10.......", "hostname")
-$count = 1
+$count = 0
 try {
     for ($i = 0; $i -lt $machine_adr.length; $i++) {
         "Adr " + $machine_adr[$i]
