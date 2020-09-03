@@ -12,4 +12,6 @@ catch {
     write-output "Could not connect"
 }
 write-output "Connected success " $count
+write-output "sleep for 15 sec"
+Start-Sleep -s 15
 
