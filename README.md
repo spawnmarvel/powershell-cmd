@@ -5,7 +5,7 @@
 #### View modules use the ISE:
 ![Screenshot](power_ise.jpg)
 
-#### Paramaters for module:
+#### Parameters for module:
 ![Screenshot](powers.jpg)
 
 #### PowerShell scripts are stored in.ps1 files. 
