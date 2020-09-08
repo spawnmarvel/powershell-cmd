@@ -53,6 +53,7 @@ Get-Service | Sort-Object -property Status
 "ftft" | Out-File out.txt
 ```
 
+![Screenshot](power_ise.jpg)
 ## CMD
 Uptime:
 ``` CMD
