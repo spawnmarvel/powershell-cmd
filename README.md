@@ -1,6 +1,10 @@
 ## POWERSHELL
 
 #### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
+
+View modules
+![Screenshot](power_ise.jpg)
+
 #### PowerShell scripts are stored in.ps1 files. 
 #### In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
 ```ps1
@@ -53,7 +57,7 @@ Get-Service | Sort-Object -property Status
 "ftft" | Out-File out.txt
 ```
 
-![Screenshot](power_ise.jpg)
+
 ## CMD
 Uptime:
 ``` CMD
