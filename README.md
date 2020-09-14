@@ -77,7 +77,7 @@ REM /timfix fix file TIMes on all files, even skipped
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix  /MT:16
+robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /MT:16
 net use z: /del
 ```
 [Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
