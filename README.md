@@ -62,12 +62,7 @@ Get-Service | Sort-Object -property Status
 
 
 ## CMD
-### Robocopy
-Uptime:
-``` CMD
-systeminfo | find "System Boot Time"
-```
-Copy:
+### Robocopy copy all
 ``` CMD
 REM /e copy subfolders including empty
 REM /r:0  Number of retries (default:1000000)
@@ -75,20 +70,32 @@ REM /w:o wait time between retires
 REM /sec copy files with SECurity
 REM /secfix fix file SECurity on all files, even skipped files
 REM /timfix fix file TIMes on all files, even skipped
+REM /log
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /MT:16
+REM robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /MT:16
+robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /log:cp_log.txt
 net use z: /del
+```
+
+### Robocopy (just file structure)
+``` CMD
+robocopy C:\tmp C:\temp2 /e /xf *
 ```
 [Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
 
 #### MT
 MT is the number of threads to use (see discussion below) When using robocopy, you should choose the “/mt” parameter to maximize throughput. This lets you control how many parallel threads do the copy, essentially controlling the queue depth of the IO requests to storage. A very low thread count does not queue enough requests on the server to let you take advantage of the inherent parallelism of our cloud architecture. A very high thread count risks server-side throttling, which end up reducing throughput. In our testing, we have found queue depths between 16 to 32 to be best for maximizing throughput. 
 
-### Robocopy (just file structure)
-``` CMD
-robocopy C:\tmp C:\temp2 /e /xf *
-```
+[robocopy-the-ultimate] [https://adamtheautomator.com/robocopy-the-ultimate/]
+
+Note that if you do use /MT, you won’t be able to use /IPG or /EFSRAW. For better performance, don’t output the log to the console. Instead, use /LOG.
+
+Robocopy does not copy open files. Any process may open files for exclusive read access by withholding the FILE_SHARE_READ flag during opening. Even Robocopy's Backup mode will not touch those files.
+
+
+
+
 ## Linux
 
