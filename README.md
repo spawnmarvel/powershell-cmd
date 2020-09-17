@@ -74,8 +74,7 @@ REM /log the log file will come where your path is in cmd
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-REM robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /MT:16
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /log:cp_log.txt
+robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log"
 net use z: /del
 ```
 
