@@ -70,7 +70,7 @@ REM /w:o wait time between retires
 REM /sec copy files with SECurity
 REM /secfix fix file SECurity on all files, even skipped files
 REM /timfix fix file TIMes on all files, even skipped
-REM /log
+REM /log the log file will come where your path is in cmd
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
