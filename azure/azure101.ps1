@@ -1,4 +1,5 @@
 # Get all resources in the current subscription
+# ft = format table
 Get-AzResource | ft
 # Get all resources in a resource group
 Get-AzResource -ResourceGroupName bose-rg | ft
