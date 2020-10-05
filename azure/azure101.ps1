@@ -9,3 +9,13 @@ Get-AzResource -ResourceGroupName bose* | ft
 Get-AzResourceGroup -Name ‘bose*’
 # Remove all resources in a group and the group
 Get-AzResourceGroup -Name ‘bose*’ | Remove-AzResourceGroup -Force -AsJob
+
+#Rm storage account
+#First list it
+Get-AzResource -ResourceGroupName boos* | ft
+# Name         ResourceGroupName ResourceType                      Location
+# ----         ----------------- ------------                      --------
+# boosestorage boose-rg          Microsoft.Storage/storageAccounts westus
+# boosewe      boose-rg          Microsoft.Storage/storageAccounts westus
+# rm it, boosestorage
+Remove-AzureRmResource -ResourceName boosestorage -ResourceType Microsoft.Storage/storageAccounts -ResourceGroupName boose-rg
