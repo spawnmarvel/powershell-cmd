@@ -32,4 +32,8 @@ docker run -d -p 15672:15672 -p 5672:5672 --name rabbit_test rabbitmq:3-manageme
 docker stop rabbit-test
 # start it
 docker start rabbit_test
+
+#Portainer
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
  
