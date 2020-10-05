@@ -19,6 +19,8 @@ docker image ls
 # Then, remove the unwanted image(s):
 # docker image rm [image_id1] [image_id2]
 docker image rm 5726af297dd4
+# force, is beeing used by stop
+docker image rm -f 62771b0b9b09
 
 #remove all images
 docker rmi $(docker images -a -q)
