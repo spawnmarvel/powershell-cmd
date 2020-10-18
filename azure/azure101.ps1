@@ -10,6 +10,12 @@ Get-AzResourceGroup -Name ‘bose*’
 # Remove all resources in a group and the group
 Get-AzResourceGroup -Name ‘bose*’ | Remove-AzResourceGroup -Force -AsJob
 
+# time zone
+Get-TimeZone -ListAvailable
+Get-TimeZone -ListAvailable | where ({$_.Id -like "Russian*"})
+Set-TimeZone -Id "Russian Standard Time"
+Get-Date
+
 #Rm storage account
 #First list it
 Get-AzResource -ResourceGroupName boos* | ft
