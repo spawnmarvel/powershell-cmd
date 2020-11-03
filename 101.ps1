@@ -20,6 +20,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # yes
 Set-Service -Name MySql -StartupType Manual
 Set-Service -Name MySql -StartupType Automatic
+Stop-Service MySql
 
 
 
