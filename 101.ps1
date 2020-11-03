@@ -16,6 +16,7 @@ Get-WinEvent –LogName system –MaxEvents 10
 
 # change service, run as admin pshell
 Set-ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # yes
 Set-Service -Name MySql -StartupType Manual
 Set-Service -Name MySql -StartupType Automatic
