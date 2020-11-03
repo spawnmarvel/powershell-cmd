@@ -14,5 +14,10 @@ Get-Service | Sort-Object -property Status
 Get-WinEvent –LogName application –MaxEvents 10
 Get-WinEvent –LogName system –MaxEvents 10
 
+# change service, run as admin pshell
+Set-ExecutionPolicy Unrestricted
+# yes
+Set-Service -Name Dhcp -StartupType Manual
+
 
 
