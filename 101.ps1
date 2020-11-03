@@ -17,7 +17,8 @@ Get-WinEvent –LogName system –MaxEvents 10
 # change service, run as admin pshell
 Set-ExecutionPolicy Unrestricted
 # yes
-Set-Service -Name Dhcp -StartupType Manual
+Set-Service -Name MySql -StartupType Manual
+Set-Service -Name MySql -StartupType Automatic
 
 
 
