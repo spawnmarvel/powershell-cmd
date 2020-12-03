@@ -1,0 +1,1 @@
+Lab 03b - Manage Azure resources by Using ARM Templates
