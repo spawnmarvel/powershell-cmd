@@ -1,0 +1,1 @@
+03d - Manage Azure resources by Using Azure CLI
