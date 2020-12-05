@@ -5,7 +5,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2019-04-01",
-      "name": "boose-storage",
+      "name": "boosestorage",
       "location": "westeurope",
       "sku": {
         "name": "Standard_LRS"
