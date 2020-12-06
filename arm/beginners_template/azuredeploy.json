@@ -6,6 +6,20 @@
       "type": "string",
       "minLength": 3,
       "maxLength": 30
+    },
+    "storageSKU": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_RAGRS",
+        "Standard_ZRS",
+        "Premium_LRS",
+        "Premium_ZRS",
+        "Standard_GZRS",
+        "Standard_RAGZRS"
+      ]
     }
   },
   "resources": [
@@ -15,7 +29,7 @@
       "name": "[parameters('storageName')]",
       "location": "westeurope",
       "sku": {
-        "name": "Standard_LRS"
+        "name": "[parameters('storageSKU')]"
       },
       "kind": "StorageV2",
       "properties": {
