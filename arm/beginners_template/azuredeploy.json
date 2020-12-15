@@ -43,5 +43,11 @@
         "supportsHttpsTrafficOnly": true
       }
     }
-  ]
+  ],
+  "outputs": {
+    "storageEndpoint": {
+      "type": "object",
+      "value": "[reference(variables('uniqueStorageName')).primaryEndpoints]"
+    }
+  }
 }

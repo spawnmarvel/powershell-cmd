@@ -6,16 +6,19 @@ $resourceGr1 = "boose-rg1"
 # New-AzResourceGroup -Name $resourceGr -Location "West Europe"
 # Deploy template
 $templateFile = "C:\giti\powershell-cmd-bash\arm\beginners_template\azuredeploy.json"
-# ******************************************************************    Create first, add resource, add paramter
+
+# ******************************************************************    1 Create first, add resource
+# New-AzResourceGroupDeployment -Name addStorage -ResourceGroupName $resourceGr -TemplateFile $templateFile
+# ****************************************************************** 2 add paramter
 # New-AzResourceGroupDeployment -Name addName -ResourceGroupName $resourceGr -TemplateFile $templateFile -storageName "boosestorage1" -storageSKU Standard_LRS
 
-# ******************************************************************    Add template functions
+# ******************************************************************    3 Add template functions
 # New-AzResourceGroupDeployment -Name addLocationParameter -ResourceGroupName $resourceGr -TemplateFile $templateFile -storageName "boosestorage" -storageSKU Standard_LRS
 
 # move a resurce, view move_resource.ps1
 
-# ******************************************************************    Add variables
-New-AzResourceGroupDeployment -Name addnameVariable -ResourceGroupName $resourceGr -TemplateFile $templateFile -storagePrefix "boose" -storageSKU Standard_LRS -Debug
+# ******************************************************************    4 Add variables
+# New-AzResourceGroupDeployment -Name addnameVariable -ResourceGroupName $resourceGr -TemplateFile $templateFile -storagePrefix "boose" -storageSKU Standard_LRS -Debug
 # $operations = New-AzResourceGroupDeployment -Name addnameVariable -ResourceGroupName $resourceGr -TemplateFile $templateFile -storagePrefix "boose" -storageSKU Standard_LRS -Debug
 
 # this will give you all the operations of this deploy
@@ -27,6 +30,9 @@ New-AzResourceGroupDeployment -Name addnameVariable -ResourceGroupName $resource
 #    $oper.Properties.Response | ConvertTo-Json -Depth 10
 #}
 
+# ******************************************************************  5Add output
+New-AzResourceGroupDeployment -Name addOutputs -ResourceGroupName $resourceGr -TemplateFile $templateFile -storagePrefix "boose" -storageSKU Standard_LRS -Verbose
+
+
 # *****************************************************************
-# add outputs
 
