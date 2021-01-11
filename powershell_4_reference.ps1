@@ -48,12 +48,10 @@ $splitt_string = "Test-Azure" -split "-"
 $splitt_string
 $join_string = "Test", "Azure", "Now" -join ";"
 $join_string
-
 1..10 | foreach{$_ +2}
 42 -is [int]
 $a = 42 -as [String]
 Write-Host $a
-
 
 Write-Host "`n4"
 
