@@ -5,8 +5,6 @@
 #### View modules use the ISE:
 ![Screenshot](power_ise.jpg)
 
-
-#### PowerShell scripts are stored in.ps1 files. 
 #### In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
 ```ps1
 Get-ExecutionPolicy
