@@ -7,6 +7,8 @@ write-host "1 Useful commands"
 # Get-Help Get-Service
 # 3
 # Get-Help Get-Member -Examples
+# $x = "string"
+# $x | Get-Member # returns methods: Clone, Contains, Replace etc
 # 4 Gets the module that is imported / or can be imported
 # Get-Module
 
@@ -48,10 +50,12 @@ $splitt_string = "Test-Azure" -split "-"
 $splitt_string
 $join_string = "Test", "Azure", "Now" -join ";"
 $join_string
+
 1..10 | foreach{$_ +2}
 42 -is [int]
 $a = 42 -as [String]
 Write-Host $a
+
 
 Write-Host "`n4"
 
