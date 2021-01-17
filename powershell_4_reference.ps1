@@ -51,19 +51,59 @@ $splitt_string
 $join_string = "Test", "Azure", "Now" -join ";"
 $join_string
 
-1..10 | foreach{$_ +2}
+1..10 | foreach{$_ +2} # range operator
+
 42 -is [int]
 $a = 42 -as [String]
 Write-Host $a
 
+# sub expression
+# $p = "Get-Process"
+# & $p
+# $sp = {Get-Process | select -First 2}
+# & $sp
 
-Write-Host "`n4"
+# Redirection operators
+# * all
+# 1 Success output
+# 2 Errors
+# 3 Warning msg
+# 4 Verbose
+# 5 Debug
+
+$logAll = "Redirects all streams to all.txt"
+$logAll *> "C:\giti\powershell-cmd-bash\powershell_4_log\all.txt"
+$LogWarn= "Write warnings to output"
+$LogWarn 3> "C:\giti\powershell-cmd-bash\powershell_4_log\warn.log"
+$logVerb = "Appends verbose" 
+$logVerb 4>> "C:\giti\powershell-cmd-bash\powershell_4_log\verbose.log"
+$logDe = "Debug" 
+$logDe 5> "C:\giti\powershell-cmd-bash\powershell_4_log\debug.log"
+
+
+
+Write-Host "`n3 Arrays"
+write-host 1,2,3 # arrays of int
+write-host "Let","it", "snow"  # arrays of str
+@() # emtpty ar
+@(45, 75) # arr with 2
+
+$arr = @("XL", "L", "M", "S")
+Write-Host $arr
+$arr[2] # M
+$arr[0..2] # XL, L, M
+
+
+Write-Host "`n4 Hash tables"
+
+
+
+# itemsray
+Write-Host "`nTesting..."
 
 $ar = @(1,2,3,4)
 $ar -contains 4
 
-
-# itemsray
 $items = @(99, 101)
 Write-Host $items
 Write-Host $items.Count
