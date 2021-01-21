@@ -1,1 +1,0 @@
-03c - Manage Azure resources by Using Azure PowerShell
