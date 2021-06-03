@@ -59,6 +59,7 @@ Get-Service | Sort-Object -property Status
 
 ## CMD
 ### Robocopy copy all
+#### ROBOCOPY Source_folder Destination_folder [files_to_copy] [options]
 ``` CMD
 REM /e copy subfolders including empty
 REM /r:0  Number of retries (default:1000000)
@@ -76,6 +77,7 @@ net use z: /del
 
 ### Robocopy (just file structure)
 ``` CMD
+REM /XF file [file]... : eXclude Files matching given names/paths/wildcards.
 robocopy C:\tmp C:\temp2 /e /xf *
 ```
 [Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
