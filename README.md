@@ -73,7 +73,7 @@ REM us /np for faster copy, since it does not write % to log file
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log" /np
+robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /mt:32 /log:"F:\robo_log.log" /np
 net use z: /del
 ```
 
