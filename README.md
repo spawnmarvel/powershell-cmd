@@ -69,8 +69,8 @@ REM /secfix fix file SECurity on all files, even skipped files
 REM /timfix fix file TIMes on all files, even skipped
 REM /log the log file will come where your path is in cmd
 REM /np Specifies that the progress of the copying operation (the number of files or directories copied so far) will not be displayed.
-REM us /np for faster copy, since it does not write % to log file
-REM /mt:32
+REM /np for faster copy, since it does not write % to log file
+REM /mt:32 or 16, 8 is default, hm sometimes this is causing errors, must log all if this is used 
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
