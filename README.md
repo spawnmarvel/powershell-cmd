@@ -70,10 +70,11 @@ REM /timfix fix file TIMes on all files, even skipped
 REM /log the log file will come where your path is in cmd
 REM /np Specifies that the progress of the copying operation (the number of files or directories copied so far) will not be displayed.
 REM us /np for faster copy, since it does not write % to log file
+REM /mt:32
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /mt:32 /log:"F:\robo_log.log" /np
+robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log" /np
 net use z: /del
 ```
 
