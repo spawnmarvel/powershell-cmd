@@ -76,6 +76,9 @@ REM net use: connect, remove and configure connections to shared resources like 
 net use z: \\WM01\f$
 robocopy z:\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log" /np
 net use z: /del
+
+REM and not map it to z
+robocopy \\WM01\\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log" /np
 ```
 
 ### Robocopy (just file structure)
