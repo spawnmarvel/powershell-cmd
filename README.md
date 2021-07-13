@@ -80,7 +80,7 @@ net use z: /del
 pause
 
 REM and not map it to z
-robocopy \\WM01\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log" /np
+robocopy \\WM01\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /log:"F:\robo_log.log" /np
 ```
 
 ### Robocopy (just file structure)
