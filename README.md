@@ -63,8 +63,6 @@ Get-Service | Sort-Object -property Status
 ``` CMD
 robocopy C:\tmp C:\temp2 /e /xf *
 ```
-[Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
-
 
 ### Robocopy copy all (run as admin to keep all properties)
 ``` CMD
@@ -90,6 +88,8 @@ pause
 REM and not map it to z
 robocopy \\WM01\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /log:"F:\robo_log.log" /np
 ```
+
+[Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
 
 #### MT
 MT is the number of threads to use (see discussion below) When using robocopy, you should choose the “/mt” parameter to maximize throughput. This lets you control how many parallel threads do the copy, essentially controlling the queue depth of the IO requests to storage. A very low thread count does not queue enough requests on the server to let you take advantage of the inherent parallelism of our cloud architecture. A very high thread count risks server-side throttling, which end up reducing throughput. In our testing, we have found queue depths between 16 to 32 to be best for maximizing throughput. 
