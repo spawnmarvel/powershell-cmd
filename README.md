@@ -75,12 +75,20 @@ REM /sec copy files with SECurity
 REM /secfix fix file SECurity on all files, even skipped files
 REM /timfix fix file TIMes on all files, even skipped
 REM /log the log file will come where your path is in cmd
+REM /np Specifies that the progress of the copying operation (the number of files or directories copied so far) will not be displayed.
+REM /np for faster copy, since it does not write % to log file
+REM /mt:32 or 16, 8 is default, hm sometimes this is causing errors, must log all if this is used 
+REM It is all about the bandwidth, the cloud can be quick or slow...mt could be danger and give errors!
 
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
-robocopy z:\datacatalog e:\datacatalog /e /r:0 /w:0 /sec /secfix /timfix /maxage:182 /log:"F:\robo_log.log"
+robocopy z:\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /log:"F:\robo_log.log" /np
 net use z: /del
+pause
+
+REM and not map it to z
+robocopy \\WM01\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /log:"F:\robo_log.log" /np
 ```
 
 #### MT
