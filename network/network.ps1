@@ -1,17 +1,24 @@
-# loop, https://powertoe.wordpress.com/2009/12/14/powershell-part-4-arrays-and-for-loops/
-$machine_adr = @("10.....", "10.......", "hostname")
-$count = 0
-try {
-    for ($i = 0; $i -lt $machine_adr.length; $i++) {
-        "Adr " + $machine_adr[$i]
-        $rv= New-Object System.Net.Sockets.TcpClient($machine_adr[$i], 8080)
-        $count++
-    }
-}
-catch {
-    write-output "Could not connect" $machine_adr[$i]
-}
-write-output "Connected success " $count
-write-output "sleep for 15 sec"
-Start-Sleep -s 15
+$test = @('remotehostname:80','remotehostname:9548','remotehostname:4561', 'remotehostname:4562')
 
+Write-Output "check server and port, lazy admin at:"
+$env:computername
+
+Foreach ($t in $test)
+{
+  $source = $t.Split(':')[0]
+  $port = $t.Split(':')[1]
+  
+  Write-Host "Connecting to $source on port $port"
+
+  try
+  {
+    $socket = New-Object System.Net.Sockets.TcpClient($source, $port)
+  }
+  catch [Exception]
+  {
+    Write-Host $_.Exception.GetType().FullName
+    Write-Host $_.Exception.Message
+  }
+
+  Write-Host "Connected`n"
+}
