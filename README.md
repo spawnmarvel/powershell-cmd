@@ -90,7 +90,7 @@ REM and not map it to z
 robocopy \\WM01\f$\datacatalog e:\datacatalog /e /r:1 /w:5 /sec /secfix /timfix /log:"F:\robo_log.log" /np
 
 REM "" path
-Robocopy "c:\Program Files (x86)\folder\folder2" "c:\Program Files (x86)\folder\folder2" /e /r:1 /w:5 /sec /secfix /timfix /log:"c:\Program Files (x86)\folder\folder2\robo_log.log" /np
+Robocopy "c:\Program Files (x86)\folder\folder1" "c:\Program Files (x86)\folder\folder2" /e /r:1 /w:5 /sec /secfix /timfix /log:"c:\Program Files (x86)\folder\folder2\robo_log.log" /np
 ```
 
 [Migrating Data to Microsoft Azure Files MT] [https://azure.microsoft.com/en-us/blog/migrating-data-to-microsoft-azure-files/]
