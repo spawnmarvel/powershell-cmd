@@ -79,6 +79,8 @@ REM /np for faster copy, since it does not write % to log file
 REM /mt:32 or 16, 8 is default, hm sometimes this is causing errors, must log all if this is used 
 REM It is all about the bandwidth, the cloud can be quick or slow...mt could be danger and give errors!
 
+REM NOTE: /sec /secfix could be problematic between Azure VM and Azure Storage Account File Share (but do you need them?), i.e access denied. 
+REM NOTE: Check if you can edit in the container with your user, mainly the security on a folder
 
 REM net use: connect, remove and configure connections to shared resources like mapped drives
 net use z: \\WM01\f$
