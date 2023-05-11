@@ -87,7 +87,9 @@ Get-Service -Name W*
 ```
 #### If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
 ```ps1
-Update-Help #to update the help data
+# To update the help data
+Update-Help
+
 Get-Help Get-Process -Examples
 ```
 #### Pipes
