@@ -78,8 +78,12 @@ Get-Service | Get-Member
 # ----                      ----------    ----------
 # Name                      AliasProperty Name = ServiceName
 
-
+# We can then do the query
 Get-Service -Name W*
+# Status   Name               DisplayName
+# ------   ----               -----------
+# Running  W32Time            Windows Time
+# Stopped  WaaSMedicSvc       Windows Update Medic Service
 ```
 #### If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
 ```ps1
