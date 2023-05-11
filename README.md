@@ -174,7 +174,7 @@ https://www.tutorialspoint.com/powershell/powershell_operators.htm
 ### Looping
 
 ```ps1
-
+#for loop
  $array = @("item1", "item2", "item3")
  
 > for($i = 0; $i -lt $array.length; $i++){ $array[$i] }
@@ -182,6 +182,38 @@ item1
 item2
 item3
 
+# forEach loop
+$array = @("item1", "item2", "item3")
+ 
+> foreach ($element in $array) { $element }
+item1
+item2
+item3
+# while loop
+$array = @("item1", "item2", "item3")
+$counter = 0;
+
+while($counter -lt $array.length){
+   $array[$counter]
+   $counter += 1
+}
+ 
+item1
+item2
+item3
+
+# do.. while loop
+$array = @("item1", "item2", "item3")
+$counter = 0;
+
+do {
+   $array[$counter]
+   $counter += 1
+} while($counter -lt $array.length)
+ 
+item1
+item2
+item3 
 ```
 
 https://www.tutorialspoint.com/powershell/powershell_looping.htm
