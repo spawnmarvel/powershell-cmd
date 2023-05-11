@@ -86,7 +86,8 @@ Get-Service -Name W*
 # Stopped  WaaSMedicSvc       Windows Update Medic Service
 ```
 
-If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
+If you still don’t find the cmdlet you need, you can make sure that help is updated.
+Then get examples for a cmdlet
 
 ```ps1
 # To update the help data
