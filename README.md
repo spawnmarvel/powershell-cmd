@@ -150,6 +150,8 @@ Function Add-LogOut($txt) {
 # Call it
 Add-LogOut("Log1")
 
+# Read XML
+Get-Content test.xml 
 
 ```
 
