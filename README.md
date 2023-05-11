@@ -3,7 +3,7 @@
 #### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
 
 #### View modules use the ISE:
-![Screenshot](power_ise.jpg)
+![Screenshot](https://github.com/spawnmarvel/powershell-cmd/blob/master/x_images/power_ise.jpg)
 
 #### In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
 ```ps1
