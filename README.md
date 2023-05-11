@@ -62,6 +62,12 @@ The Get-Help cmdlet displays information about PowerShell concepts and commands,
 ```ps1
 # Get-Help cmdlet
 Get-Help Get-Service
+# NAME
+#    Get-Service
+# SYNTAX
+#    Get-Service [[-Name] <string[]>] [-DependentServices] [-RequiredServices] [-Include <string[]>] [-Exclude <string[]
+#    >] [<CommonParameters>]
+# [...]
 ```
 
 If you forget a cmdlet’s parameters, use cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
