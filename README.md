@@ -1,11 +1,17 @@
 ## POWERSHELL
 
-#### Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
+### Good to know
 
-#### View modules use the ISE:
+Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
+
+### ISE
+View modules use the ISE
+
 ![Screenshot](https://github.com/spawnmarvel/powershell-cmd/blob/master/x_images/power_ise.jpg)
 
-#### In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
+### Get-ExecutionPolicy
+
+In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
 ```ps1
 Get-ExecutionPolicy
 ```
@@ -15,10 +21,22 @@ Get-ExecutionPolicy
 * RemoteSigned— You can run your own scripts or scripts signed by a trusted developer.
 * Unrestricted— You can run any script you want.
 
-#### To start working with ps1
+### Set-ExecutionPolicy RemoteSigned
+
+To start working with ps1
 ```ps1 
 Set-ExecutionPolicy RemoteSigned
 ```
+
+## Powershell Tutorial (Tutorialspoint)
+
+https://www.tutorialspoint.com/powershell/index.htm
+
+View the Windows Powershell Language quick reference also
+
+https://github.com/spawnmarvel/powershell-cmd/tree/master/x_quick_reference_pdf
+
+
 
 ### Cmdlets
 #### A cmdlet is a PowerShell command with a predefined function, similar to an operator in a programming language, A cmdlet always consists of a verb (or a word that functions as a verb) and a noun, separated with a hyphen (the “verb-noun” rule). For example, some of the verbs include:
@@ -59,9 +77,13 @@ Get-Service | Sort-Object -property Status
 
 
 
-## Linux / BASH more will come, for now view x_quick_reference_pdf
+## Linux / BASH Not a tutorial
 
-## CMD
+View the BASH Language quick reference also
+
+https://github.com/spawnmarvel/powershell-cmd/tree/master/x_quick_reference_pdf
+
+## CMD Not a tutorial, view postfix .cmd files
 
 ### Robocopy (just file structure)
 ``` CMD
