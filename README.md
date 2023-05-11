@@ -73,6 +73,10 @@ Get-Help Get-Service
 If you forget a cmdlet’s parameters, use cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
 ```ps1
 Get-Service | Get-Member
+#    TypeName: System.Service.ServiceController#StartupType
+# Name                      MemberType    Definition
+# ----                      ----------    ----------
+# Name                      AliasProperty Name = ServiceName
 
 
 Get-Service -Name W*
