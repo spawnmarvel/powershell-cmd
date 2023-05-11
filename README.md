@@ -59,7 +59,7 @@ Get-Service | Sort-Object -property Status
 
 
 
-## Linux / BASH view quick_reference_pdf
+## Linux / BASH more will come, for now view quick_reference_pdf
 
 ## CMD
 
