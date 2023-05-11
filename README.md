@@ -345,7 +345,7 @@ Get-Service * | Sort-Object ServiceType `
 
 https://www.tutorialspoint.com/powershell/powershell_backticks.htm
 
-### Bracets
+### Brackets
 
 ```ps1
 # Parenthesis brackets. − ()
@@ -361,6 +361,21 @@ item3
 ```
 
 https://www.tutorialspoint.com/powershell/powershell_brackets.htm
+
+### Creating Alias
+
+```ps1
+# Create alias
+New-Alias -Name gs -Value Get-Service
+
+# Use alias
+gs
+# Status   Name               DisplayName
+# ------   ----               -----------
+# Stopped  AarSvc_12a85c      Agent Activation Runtime_12a85c
+```
+
+https://www.tutorialspoint.com/powershell/powershell_alias.htm
 
 
 ## Linux / BASH, Not a tutorial
