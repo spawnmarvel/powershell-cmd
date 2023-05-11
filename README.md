@@ -102,13 +102,13 @@ Get-Service | Sort-Object -property Status
 
 
 
-## Linux / BASH Not a tutorial
+## Linux / BASH, Not a tutorial
 
 View the BASH Language quick reference also
 
 https://github.com/spawnmarvel/powershell-cmd/tree/master/x_quick_reference_pdf
 
-## CMD Not a tutorial, view postfix .cmd files
+## CMD, Not a tutorial, view postfix .cmd files
 
 ### Robocopy (just file structure)
 ``` CMD
