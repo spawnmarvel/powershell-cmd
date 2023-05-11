@@ -53,12 +53,11 @@ Good news — you don’t need to memorize all cmdlets.
 You can list all cmdlets by executing the Get-Help -Category cmdlet
 
 ```ps1
-# Example
+# Get-Help cmdlet
 Get-Help Get-Service
 ```
 
-
-If you forget a cmdlet’s parameters, use Cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
+If you forget a cmdlet’s parameters, use cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
 ```ps1
 Get-Service | Get-Member
 
