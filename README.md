@@ -189,6 +189,7 @@ $array = @("item1", "item2", "item3")
 item1
 item2
 item3
+
 # while loop
 $array = @("item1", "item2", "item3")
 $counter = 0;
