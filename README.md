@@ -101,14 +101,15 @@ Get-Help Get-Process -Examples
 #    Get-Service "wmi*"
 
 ```
-#### Pipes
-#### | (the “pipe”) A pipe passes data from one cmdlet to another
-#### For example, if you execute the following script, you’ll get all services sorted by their status:
+### Pipes
+| (the “pipe”) A pipe passes data from one cmdlet to another
+For example, if you execute the following script, you’ll get all services sorted by their status:
 ```ps1
-# get service info and sort by status
+# Get service info and sort by status
 Get-Service | Sort-Object -property Status
-# output dir to text
-"ftft" | Out-File out.txt
+
+# Output dir to text
+"File-content" | Out-File out.txt
 ```
 
 
