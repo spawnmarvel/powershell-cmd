@@ -52,6 +52,10 @@ Good news — you don’t need to memorize all cmdlets, use Get-Command
 
 ```ps1
 Get-Command
+# CommandType     Name                                               Version    Source
+# -----------     ----                                               -------    ------
+# Alias           Add-AdlAnalyticsDataSource                         1.0.2      Az.DataLakeAnalytics
+# [...]
 ```
 The Get-Help cmdlet displays information about PowerShell concepts and commands, including cmdlets, functions, Common Information Model (CIM) commands, workflows, providers, aliases, and scripts.
 
