@@ -112,7 +112,58 @@ Get-Service | Sort-Object -property Status
 "File-content" | Out-File out.txt
 ```
 
+### Files and Folders
 
+https://www.tutorialspoint.com/powershell/powershell_files_folders.htm
+
+### Date and Time
+
+https://www.tutorialspoint.com/powershell/powershell_dates_timers.htm
+
+### Files/IO
+
+Text, XML, CSV, HTML
+
+https://www.tutorialspoint.com/powershell/powershell_files_io.htm
+
+### Advanced CMDlets
+
+```ps1
+# Get stopped services.
+Get-Service | Where-Object {$_.Status -eq "Stopped"}
+
+# Get the file details in a variable.
+$A = Get-ChildItem D:\temp\test\*.txt
+
+# In this example, we'll divide integer in an array. We'll refer to each object using $_.
+1000,2000,3000 | ForEach-Object -Process {$_/1000}
+
+# In this example, we'll create objects using Process properties.
+Get-Process | Select-Object -Property ProcessName, Id, WS -Last 5
+
+```
+
+https://www.tutorialspoint.com/powershell/powershell_advanced_cmdlets.htm
+
+### Scripting
+
+* Cmdlets − Cmdlets perform common system administration tasks, for example managing the registry, services, processes, event logs, and using Windows Management Instrumentation (WMI).
+* Object based − PowerShell possesses powerful object manipulation capabilities. Objects can be sent to other tools or databases directly.
+* [...]
+
+https://www.tutorialspoint.com/powershell/powershell_scripting.htm
+
+# Special Variables
+
+| Operator | Desc
+| -------- | ---
+|$$        | Represents the last token in the last line received by the session.
+|$?        | Represents the execution status of the last operation. It contains TRUE if the last operation succeeded and FALSE if it failed.
+|$_        | Same as $PSItem. Contains the current object in the pipeline object. You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.
+|[...]|
+
+
+https://www.tutorialspoint.com/powershell/powershell_special_variables.htm
 
 ## Linux / BASH, Not a tutorial
 
