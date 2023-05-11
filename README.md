@@ -219,6 +219,41 @@ item3
 
 https://www.tutorialspoint.com/powershell/powershell_looping.htm
 
+### Conditions
+
+```ps1
+# if
+if(Boolean_expression) {
+   // Statements will execute if the Boolean expression is true
+}
+
+# if else
+if(Boolean_expression) {
+   // Executes when the Boolean expression is true
+}else {
+   // Executes when the Boolean expression is false
+}
+
+# nested
+if(Boolean_expression 1) {
+   // Executes when the Boolean expression 1 is true
+   if(Boolean_expression 2) {
+      // Executes when the Boolean expression 2 is true
+   }
+}
+
+# switch
+switch(<test-value>) {
+   <condition> {<action>} 
+      break; // optional
+   <condition> {<action>} 
+      break; // optional
+   <condition> {<action>} 
+      break; // optional
+}
+```
+https://www.tutorialspoint.com/powershell/powershell_conditions.htm
+
 
 ## Linux / BASH, Not a tutorial
 
