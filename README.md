@@ -51,7 +51,7 @@ A cmdlet is a PowerShell command with a predefined function, similar to an opera
 Good news — you don’t need to memorize all cmdlets. You can list all cmdlets by executing the Get-Help -Category cmdlet
 
 ```ps1
-Get-Help
+Get-Help Get-Service
 ```
 Example
 ```ps1
