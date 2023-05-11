@@ -112,6 +112,24 @@ Get-Service | Sort-Object -property Status
 "File-content" | Out-File out.txt
 ```
 
+### about_Pipelines
+A pipeline is a series of commands connected by pipeline operators (|) (ASCII 124). Each pipeline operator sends the results of the preceding command to the next command.
+
+```ps1
+# Command-1 | Command-2 | Command-3
+
+# Here is a simple example. The following command gets the Notepad process and then stops it.
+Get-Process notepad | Stop-Process
+
+# This pipeline example gets the text files in the current directory, selects only the files that are more than 10,000 bytes long, sorts them by length, and displays the name and length of each file in a table.
+Get-ChildItem -Path *.txt |
+  Where-Object {$_.length -gt 10000} |
+    Sort-Object -Property length |
+      Format-Table -Property name, length
+```
+
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-7.3
+
 ### Files and Folders
 
 https://www.tutorialspoint.com/powershell/powershell_files_folders.htm
