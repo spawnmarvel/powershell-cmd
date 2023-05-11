@@ -85,12 +85,20 @@ Get-Service -Name W*
 # Running  W32Time            Windows Time
 # Stopped  WaaSMedicSvc       Windows Update Medic Service
 ```
-#### If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
+
+If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
+
 ```ps1
 # To update the help data
 Update-Help
 
+# Get examples for a cmdlet
 Get-Help Get-Process -Examples
+# --------- Example 1: Get all services on the computer ---------
+#    Get-Service
+#    --- Example 2: Get services that begin with a search string ---
+#    Get-Service "wmi*"
+
 ```
 #### Pipes
 #### | (the “pipe”) A pipe passes data from one cmdlet to another
