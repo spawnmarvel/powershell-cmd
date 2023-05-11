@@ -50,11 +50,11 @@ A cmdlet is a PowerShell command with a predefined function, similar to an opera
 
 Good news — you don’t need to memorize all cmdlets. You can list all cmdlets by executing the Get-Help -Category cmdlet
 
-```
+```ps1
 Get-Help
 ```
 Example
-```
+```ps1
 Get-Service -Name W*
 ```
 #### If you forget a cmdlet’s parameters, just use a script like the following, which will display the parameters for the Get-Process cmdlet:
