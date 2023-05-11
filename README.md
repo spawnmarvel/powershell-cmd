@@ -39,7 +39,7 @@ https://github.com/spawnmarvel/powershell-cmd/tree/master/x_quick_reference_pdf
 
 
 ### Cmdlets
-#### A cmdlet is a PowerShell command with a predefined function, similar to an operator in a programming language, A cmdlet always consists of a verb (or a word that functions as a verb) and a noun, separated with a hyphen (the “verb-noun” rule). For example, some of the verbs include:
+A cmdlet is a PowerShell command with a predefined function, similar to an operator in a programming language, A cmdlet always consists of a verb (or a word that functions as a verb) and a noun, separated with a hyphen (the “verb-noun” rule). For example, some of the verbs include:
 
 * Get — To get something
 * Set — To define something
