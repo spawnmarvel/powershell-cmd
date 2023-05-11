@@ -4,12 +4,12 @@
 
 Using the PowerShell ISE is the preferred way to work with the scripting language, because it provides syntax highlighting, auto-filling of commands and other automation features that simplify script development and testing.
 
-### ISE
+#### ISE
 View modules use the ISE
 
 ![Screenshot](https://github.com/spawnmarvel/powershell-cmd/blob/master/x_images/power_ise.jpg)
 
-### Get-ExecutionPolicy
+#### Get-ExecutionPolicy
 
 In addition, there is policy that restricts script execution. You can check this policy by running the Get-ExecutionPolicy command in PowerShell:
 ```ps1
@@ -21,7 +21,7 @@ Get-ExecutionPolicy
 * RemoteSigned— You can run your own scripts or scripts signed by a trusted developer.
 * Unrestricted— You can run any script you want.
 
-### Set-ExecutionPolicy RemoteSigned
+#### Set-ExecutionPolicy RemoteSigned
 
 To start working with ps1
 ```ps1 
