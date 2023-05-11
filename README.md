@@ -160,10 +160,32 @@ https://www.tutorialspoint.com/powershell/powershell_scripting.htm
 |$$        | Represents the last token in the last line received by the session.
 |$?        | Represents the execution status of the last operation. It contains TRUE if the last operation succeeded and FALSE if it failed.
 |$_        | Same as $PSItem. Contains the current object in the pipeline object. You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.
+|$HOME     | C:\Users\jekl
+|$PSITEM   | Same as $_. Contains the current object in the pipeline object.
 |[...]|
 
 
 https://www.tutorialspoint.com/powershell/powershell_special_variables.htm
+
+### Operators
+
+https://www.tutorialspoint.com/powershell/powershell_operators.htm
+
+### Looping
+
+```ps1
+
+ $array = @("item1", "item2", "item3")
+ 
+> for($i = 0; $i -lt $array.length; $i++){ $array[$i] }
+item1
+item2
+item3
+
+```
+
+https://www.tutorialspoint.com/powershell/powershell_looping.htm
+
 
 ## Linux / BASH, Not a tutorial
 
