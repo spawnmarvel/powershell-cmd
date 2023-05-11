@@ -138,7 +138,20 @@ https://www.tutorialspoint.com/powershell/powershell_files_folders.htm
 
 https://www.tutorialspoint.com/powershell/powershell_dates_timers.htm
 
-### Files/IO
+### Files/IO and function
+
+```ps1
+
+# Funtion
+Function Add-LogOut($txt) {
+    Add-Content log.txt $txt
+}
+
+# Call it
+Add-LogOut("Log1")
+
+
+```
 
 Text, XML, CSV, HTML
 
@@ -394,6 +407,23 @@ gs
 ```
 
 https://www.tutorialspoint.com/powershell/powershell_alias.htm
+
+
+### Custom module
+```ps1
+
+# https://thesysadminchannel.com/powershell-module/
+# store all functions in (example file name )custom_module.psm1 file
+Function Add-LogOut($txt) {
+    Add-Content log.txt $txt
+}
+
+# Import and call the module functions
+Import-Module .\do_make_mdoule\custom_module.psm1
+
+Add-LogOut("Log1")
+
+```
 
 
 ## Linux / BASH, Not a tutorial
