@@ -58,6 +58,9 @@ Get-Service | Sort-Object -property Status
 ```
 
 
+
+## Linux / BASH view quick_reference_pdf
+
 ## CMD
 
 ### Robocopy (just file structure)
@@ -105,9 +108,4 @@ MT is the number of threads to use (see discussion below) When using robocopy, y
 Note that if you do use /MT, you won’t be able to use /IPG or /EFSRAW. For better performance, don’t output the log to the console. Instead, use /LOG.
 
 Robocopy does not copy open files. Any process may open files for exclusive read access by withholding the FILE_SHARE_READ flag during opening. Even Robocopy's Backup mode will not touch those files.
-
-
-
-
-## Linux
 
