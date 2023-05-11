@@ -48,9 +48,12 @@ A cmdlet is a PowerShell command with a predefined function, similar to an opera
 * Out — To output something
 * New — To create something (“new” is not a verb, of course, but it functions as one)
 
-Good news — you don’t need to memorize all cmdlets. 
+Good news — you don’t need to memorize all cmdlets, use Get-Command
 
-You can list all cmdlets by executing the Get-Help -Category cmdlet
+```ps1
+Get-Command
+```
+The Get-Help cmdlet displays information about PowerShell concepts and commands, including cmdlets, functions, Common Information Model (CIM) commands, workflows, providers, aliases, and scripts.
 
 ```ps1
 # Get-Help cmdlet
