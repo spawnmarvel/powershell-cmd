@@ -57,12 +57,13 @@ You can list all cmdlets by executing the Get-Help -Category cmdlet
 Get-Help Get-Service
 ```
 
+
+If you forget a cmdlet’s parameters, use Cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
 ```ps1
+Get-Service | Get-Member
+
+
 Get-Service -Name W*
-```
-#### If you forget a cmdlet’s parameters, just use a script like the following, which will display the parameters for the Get-Process cmdlet:
-```ps1
-Get-Process | Get-Member
 ```
 #### If you still don’t find the cmdlet you need, you can make sure the help is current and then get examples for a cmdlet
 ```ps1
