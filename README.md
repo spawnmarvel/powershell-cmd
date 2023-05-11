@@ -175,9 +175,9 @@ https://www.tutorialspoint.com/powershell/powershell_operators.htm
 
 ```ps1
 #for loop
- $array = @("item1", "item2", "item3")
+$array = @("item1", "item2", "item3")
  
-> for($i = 0; $i -lt $array.length; $i++){ $array[$i] }
+for($i = 0; $i -lt $array.length; $i++){ $array[$i] }
 item1
 item2
 item3
@@ -185,7 +185,7 @@ item3
 # forEach loop
 $array = @("item1", "item2", "item3")
  
-> foreach ($element in $array) { $element }
+foreach ($element in $array) { $element }
 item1
 item2
 item3
@@ -344,6 +344,24 @@ Get-Service * | Sort-Object ServiceType `
 ```
 
 https://www.tutorialspoint.com/powershell/powershell_backticks.htm
+
+### Bracets
+
+```ps1
+# Parenthesis brackets. − ()
+# Braces brackets. − {}
+# Square brackets. − []
+$array = @("item1", "item2", "item3")
+ 
+for($i = 0; $i -lt $array.length; $i++){ $array[$i] }
+item1
+item2
+item3
+
+```
+
+https://www.tutorialspoint.com/powershell/powershell_brackets.htm
+
 
 ## Linux / BASH, Not a tutorial
 
