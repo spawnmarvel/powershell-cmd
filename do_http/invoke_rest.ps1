@@ -3,7 +3,7 @@ Invoke-restmethod -Uri $endpoint
 
 # get-help Invoke-restmethod 
 #  Invoke-RestMethod [-Uri] <uri> [-Method {Default | Get | Head | Post | Put | Delete | Trace | Options | Merge | Patch}] [-UseBasicParsing] 
-[# -WebSession <WebRequestSession>] [-SessionVariable <string>] [-Credential <pscredential>] [-UseDefaultCredentials]
+# [# -WebSession <WebRequestSession>] [-SessionVariable <string>] [-Credential <pscredential>] [-UseDefaultCredentials]
 # [-CertificateThumbprint <string>] [-Certificate <X509Certificate>] [-UserAgent <string>] [-DisableKeepAlive]
 # [-TimeoutSec <int>] [-Headers <IDictionary>] [-MaximumRedirection <int>] 
 # [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] 
