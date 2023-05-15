@@ -112,9 +112,14 @@ Get-Service | Sort-Object -property Status
 "File-content" | Out-File out.txt
 
 # Write-Output sends the output to the pipeline. From there it can be piped to another cmdlet or assigned to a variable. 
-$a = 'Testing Write-OutPut'  | Write-Output
-$b = 'Testing Write-Host' | Write-Host
+$a = 'Data to pipe'  | Write-Output
+$b = 'Data gone out' | Write-Host
 Get-Variable a,b
+# Name                           Value
+# ----                           -----
+# a                              Data to pipe
+# b
+
 ```
 
 ### about_Pipelines
