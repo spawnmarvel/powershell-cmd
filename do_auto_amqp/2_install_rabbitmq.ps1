@@ -20,29 +20,34 @@ if(Test-Path -Path $rmq_dir){
 
 }
 else {
-   Write-Host "Creating directory and configuration files: " $rmq_dir
-   New-Item $rmq_dir -ItemType Directory
+   Write-Host "Creating directory and configuration files:"
+   $rv = New-Item $rmq_dir -ItemType Directory
+   Write-Host $rv.FullName
 
    if(Test-Path -Path $rmq_file_conf_path) {
       Write-Host $rmq_file_conf_path
     }
     else {
       Write-Host "Creating $rmq_file_conf_path"
-      New-Item $rmq_file_conf_path
+      $rv = New-Item $rmq_file_conf_path
+      # Write-Host $rv
       # Default conf is empty, below is good to have
-      Set-Content $rmq_dir\rabbitmq.conf "# rabbitmq.conf example : https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example"
-      Add-Content $rmq_dir\rabbitmq.conf "`n# advanced.config example: https://github.com/rabbitmq/rabbitmq-server/blob/main/deps/rabbit/docs/advanced.config.example"
-      Add-Content $rmq_dir\rabbitmq.conf "`nloopback_users.guest = true"
-      Add-Content $rmq_dir\rabbitmq.conf "`nlisteners.tcp.default = 5672"
+      Set-Content $rmq_file_conf_path "# rabbitmq.conf example : https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example"
+      Add-Content $rmq_file_conf_path "`n# advanced.config example: https://github.com/rabbitmq/rabbitmq-server/blob/main/deps/rabbit/docs/advanced.config.example"
+      Add-Content $rmq_file_conf_path "`nloopback_users.guest = true"
+      Add-Content $rmq_file_conf_path "`nlisteners.tcp.default = 5672"
+      Write-Host "Default configured $rmq_file_conf_path"
     }
     if(Test-Path -Path $rmq_file_conf_adv_path ) {
       Write-Host $rmq_file_conf_adv_path 
     }
     else {
       Write-Host "Creating $rmq_file_conf_adv_path"
-      New-Item $rmq_file_conf_adv_path 
+      $rv =New-Item $rmq_file_conf_adv_path
+      # Write-Host $rv
       # Default advanced parameters
       Set-Content $rmq_file_conf_adv_path  "[]."
+      Write-Host "Default configured $rmq_file_conf_adv_path"
     }
    
 }
