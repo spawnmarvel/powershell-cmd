@@ -115,6 +115,7 @@ Get-Service | Sort-Object -property Status
 $a = 'Data to pipe'  | Write-Output
 #  Write-Host sends it directly to the console.
 $b = 'Data gone out' | Write-Host
+# Data gone out
 Get-Variable a,b
 # Name                           Value
 # ----                           -----
