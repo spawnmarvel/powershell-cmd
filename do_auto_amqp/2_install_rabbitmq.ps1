@@ -1,27 +1,28 @@
 # https://gsilt.blogspot.com/2018/12/automating-rabbitmq-cluster-deployment.html
 
 
-# vars
-$rmq_dir = "c:\RabbitMqDirectory"
-$rmq_base = "RABBITMQ_BASE"
-$rmq_conf = "RABBITMQ_CONFIG_FILE"
-$rmq_conf_adv = "RABBITMQ_ADVANCED_CONFIG_FILE"
+# vars for env and path
+$env_rmq_dir = "c:\RabbitMqDirectory"
+$env_rmq_base = "RABBITMQ_BASE"
+$env_rmq_conf = "RABBITMQ_CONFIG_FILE"
+$env_rmq_conf_adv = "RABBITMQ_ADVANCED_CONFIG_FILE"
+# vars for files
 $rmq_file_conf = "rabbitmq.conf"
-$rmq_file_conf_path = $rmq_dir + "\" + $rmq_file_conf
+$rmq_file_conf_path = $env_rmq_dir + "\" + $rmq_file_conf
 $rmq_file_conf_adv = "advanced.config"
-$rmq_file_conf_adv_path = $rmq_dir + "\" + $rmq_file_conf_adv
+$rmq_file_conf_adv_path = $env_rmq_dir + "\" + $rmq_file_conf_adv
 
 Write-Host "#### V1.0 Set path's and install RabbitMQ or verify it, .exe must be in same folder as the script. RUN AS ADMIN"
 
 # Must set env before install
 # Make a directory for base
-if(Test-Path -Path $rmq_dir){
-    Write-Host "Directory exists: " $rmq_dir
+if(Test-Path -Path $env_rmq_dir){
+    Write-Host "Directory exists: " $env_rmq_dir
 
 }
 else {
    Write-Host "Creating directory and configuration files:"
-   $rv = New-Item $rmq_dir -ItemType Directory
+   $rv = New-Item $env_rmq_dir -ItemType Directory
    Write-Host $rv.FullName
 
    if(Test-Path -Path $rmq_file_conf_path) {
@@ -53,50 +54,50 @@ else {
 }
 
 # Add base to path
-$rmq_base_home = [System.Environment]::GetEnvironmentVariable($rmq_base, "Machine")
+$env_rmq_base_home = [System.Environment]::GetEnvironmentVariable($env_rmq_base, "Machine")
 
-if ($null -eq $rmq_base_home) 
+if ($null -eq $env_rmq_base_home) 
 {
-   Write-Host "Adding to path: " $rmq_base
-   Write-Host $rmq_dir
-   $rv = [System.Environment]::SetEnvironmentVariable($rmq_base,$rmq_dir,'Machine')
+   Write-Host "Adding to path: " $env_rmq_base
+   Write-Host $env_rmq_dir
+   $rv = [System.Environment]::SetEnvironmentVariable($env_rmq_base,$env_rmq_dir,'Machine')
    Write-Host $rv
    
 }
 else {
-   Write-Host $rmq_base " : " $rmq_base_home
+   Write-Host $env_rmq_base " : " $env_rmq_base_home
   
 }
 
 # Add conf to path
-$rmq_conf_home = [System.Environment]::GetEnvironmentVariable($rmq_conf, "Machine")
+$env_rmq_conf_home = [System.Environment]::GetEnvironmentVariable($env_rmq_conf, "Machine")
 
-if ($null -eq $rmq_conf_home) 
+if ($null -eq $env_rmq_conf_home) 
 {
-   Write-Host "Adding to path: " $rmq_conf
-   $tmp_conf = $rmq_dir + "\rabbitmq.conf"
+   Write-Host "Adding to path: " $env_rmq_conf
+   $tmp_conf = $env_rmq_dir + "\rabbitmq.conf"
    Write-Host $tmp_conf
-   $rv = [System.Environment]::SetEnvironmentVariable($rmq_conf,$tmp_conf,'Machine')
+   $rv = [System.Environment]::SetEnvironmentVariable($env_rmq_conf,$tmp_conf,'Machine')
    Write-Host $rv
 }
 
 else {
-   Write-Host $rmq_conf " : " $rmq_conf_home
+   Write-Host $env_rmq_conf " : " $env_rmq_conf_home
 }
 
 # Add adv conf to path
-$rmq_conf_adv_home = [System.Environment]::GetEnvironmentVariable($rmq_conf_adv, "Machine")
+$env_rmq_conf_adv_home = [System.Environment]::GetEnvironmentVariable($env_rmq_conf_adv, "Machine")
 
-if ($null -eq $rmq_conf_adv_home) 
+if ($null -eq $env_rmq_conf_adv_home) 
 {
-   Write-Host "Adding to path: " $rmq_conf_adv
-   $tmp_conf_adv = $rmq_dir + "\advanced.config"
+   Write-Host "Adding to path: " $env_rmq_conf_adv
+   $tmp_conf_adv = $env_rmq_dir + "\advanced.config"
    Write-Host $tmp_conf_adv
-   $rv = [System.Environment]::SetEnvironmentVariable($rmq_conf_adv,$tmp_conf_adv,'Machine')
+   $rv = [System.Environment]::SetEnvironmentVariable($env_rmq_conf_adv,$tmp_conf_adv,'Machine')
    Write-Host $rv
 }
 else {
-   Write-Host $rmq_conf_adv " : " $rmq_conf_adv_home
+   Write-Host $env_rmq_conf_adv " : " $env_rmq_conf_adv_home
 
 }
 
