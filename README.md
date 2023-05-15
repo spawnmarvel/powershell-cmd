@@ -232,6 +232,10 @@ https://www.tutorialspoint.com/powershell/powershell_special_variables.htm
 
 https://www.tutorialspoint.com/powershell/powershell_operators.htm
 
+|Operator | Description | Example
+| ------- | ----------- | -----
+|eq (equals)| Compares two values to be equal or not.| A ieq B will give false
+
 ### Looping
 
 ```ps1
