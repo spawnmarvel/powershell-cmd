@@ -123,6 +123,15 @@ Get-Variable a,b
 # a                              Data to pipe
 # b
 
+# Get all services where name starts with W
+$a = Get-Service -Name W* | Write-Output
+# Get the type
+Write-Host $a.GetType()
+# Iterate over result
+foreach($element in $a) {$element}
+# Iterate over name
+foreach($element in $a) {$element.Name}
+
 ```
 
 ### about_Pipelines
