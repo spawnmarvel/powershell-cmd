@@ -113,6 +113,7 @@ Get-Service | Sort-Object -property Status
 
 # Write-Output sends the output to the pipeline. From there it can be piped to another cmdlet or assigned to a variable. 
 $a = 'Data to pipe'  | Write-Output
+#  Write-Host sends it directly to the console.
 $b = 'Data gone out' | Write-Host
 Get-Variable a,b
 # Name                           Value
