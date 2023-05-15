@@ -6,24 +6,25 @@ $rmq_dir = "c:\RabbitMqDirectory"
 $rmq_base = "RABBITMQ_BASE"
 $rmq_conf = "RABBITMQ_CONFIG_FILE"
 $rmq_conf_adv = "RABBITMQ_ADVANCED_CONFIG_FILE"
+# vars
 
+Write-Host "#### V1.0 Set path's and install RabbitMQ or verify it, .exe must be in same folder as the script. RUN AS ADMIN"
 
-Write-Host "#### V1.0"
-Write-Host "#### 0 RUN AS ADMIN"
-Write-Host "#### 1 Install RabbitMQ or verify already installed"
-Write-Host "#### 2 Check or set env before install"
-Write-Host "#### 3 Check or install RabbitMQ from local dir (must be in same folder as script)"
-Write-Host "#### 5 Set variables for before you start"
-
-
+# Must set env before install
 # Make a directory for base
 if(Test-Path -Path $rmq_dir){
     Write-Host "Directory exists: " $rmq_dir
 
 }
 else {
-   Write-Host "Creating direcotry: " $rmq_dir
+   Write-Host "Creating directory and configuration files: " $rmq_dir
    New-Item $rmq_dir -ItemType Directory
+   New-Item $rmq_dir\rabbitmq.conf
+   New-Item $rmq_dir\advanced.config
+   Set-Content $rmq_dir\advanced.config "[]."
+   Set-Content $rmq_dir\rabbitmq.conf "# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example"
+   Add-Content $rmq_dir\rabbitmq.conf "`nloopback_users.guest = true"
+   Add-Content $rmq_dir\rabbitmq.conf "`nlisteners.tcp.default = 5672"
 }
 
 # Add base to path
@@ -53,6 +54,7 @@ if ($null -eq $rmq_conf_home)
    $rv = [System.Environment]::SetEnvironmentVariable($rmq_conf,$tmp_conf,'Machine')
    Write-Host $rv
 }
+
 else {
    Write-Host $rmq_conf " : " $rmq_conf_home
 }
@@ -74,8 +76,7 @@ else {
 }
 
 
-Write-Host "Check if RabbitMQ service is installed:"
-# Rabbitmq
+# Check if Rabbitmq is installed
 $service = Get-Service -Name RabbitMQ -ErrorAction SilentlyContinue
 # if($service -eq $null)
 if ($null -eq $service) {

@@ -1,11 +1,6 @@
 # https://gist.github.com/chgeuer/8342314
 
-Write-Host "# V1.0"
-Write-Host "# Install Erlang from local dir (must be in same folder as script)"
-Write-Host "# - > RUN AS ADMIN"
-Write-Host "# V1.0"
-Write-Host "Check if Erlang is installed, check regedit"
-Write-Host "# Notice that erlsrv is not a general service utility for Windows, but designed for embedded Erlang systems"
+Write-Host "#### V1.0 Install Erlang and set path or verify it, .exe must be in same folder as the script. RUN AS ADMIN"
 
 $erlangkey = Get-ChildItem HKLM:\SOFTWARE\Wow6432Node\Ericsson\Erlang -ErrorAction SilentlyContinue
 if ($null -eq $erlangkey ) { 
