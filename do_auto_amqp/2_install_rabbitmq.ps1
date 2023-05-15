@@ -6,7 +6,10 @@ $rmq_dir = "c:\RabbitMqDirectory"
 $rmq_base = "RABBITMQ_BASE"
 $rmq_conf = "RABBITMQ_CONFIG_FILE"
 $rmq_conf_adv = "RABBITMQ_ADVANCED_CONFIG_FILE"
-# vars
+$rmq_file_conf = "rabbitmq.conf"
+$rmq_file_conf_path = $rmq_dir + "\" + $rmq_file_conf
+$rmq_file_conf_adv = "advanced.config"
+$rmq_file_conf_adv_path = $rmq_dir + "\" + $rmq_file_conf_adv
 
 Write-Host "#### V1.0 Set path's and install RabbitMQ or verify it, .exe must be in same folder as the script. RUN AS ADMIN"
 
@@ -19,12 +22,29 @@ if(Test-Path -Path $rmq_dir){
 else {
    Write-Host "Creating directory and configuration files: " $rmq_dir
    New-Item $rmq_dir -ItemType Directory
-   New-Item $rmq_dir\rabbitmq.conf
-   New-Item $rmq_dir\advanced.config
-   Set-Content $rmq_dir\advanced.config "[]."
-   Set-Content $rmq_dir\rabbitmq.conf "# https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example"
-   Add-Content $rmq_dir\rabbitmq.conf "`nloopback_users.guest = true"
-   Add-Content $rmq_dir\rabbitmq.conf "`nlisteners.tcp.default = 5672"
+
+   if(Test-Path -Path $rmq_file_conf_path) {
+      Write-Host $rmq_file_conf_path
+    }
+    else {
+      Write-Host "Creating $rmq_file_conf_path"
+      New-Item $rmq_file_conf_path
+      # Default conf is empty, below is good to have
+      Set-Content $rmq_dir\rabbitmq.conf "# rabbitmq.conf example : https://github.com/rabbitmq/rabbitmq-server/blob/v3.8.x/deps/rabbit/docs/rabbitmq.conf.example"
+      Add-Content $rmq_dir\rabbitmq.conf "`n# advanced.config example: https://github.com/rabbitmq/rabbitmq-server/blob/main/deps/rabbit/docs/advanced.config.example"
+      Add-Content $rmq_dir\rabbitmq.conf "`nloopback_users.guest = true"
+      Add-Content $rmq_dir\rabbitmq.conf "`nlisteners.tcp.default = 5672"
+    }
+    if(Test-Path -Path $rmq_file_conf_adv_path ) {
+      Write-Host $rmq_file_conf_adv_path 
+    }
+    else {
+      Write-Host "Creating $rmq_file_conf_adv_path"
+      New-Item $rmq_file_conf_adv_path 
+      # Default advanced parameters
+      Set-Content $rmq_file_conf_adv_path  "[]."
+    }
+   
 }
 
 # Add base to path
