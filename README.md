@@ -234,7 +234,12 @@ https://www.tutorialspoint.com/powershell/powershell_operators.htm
 
 |Operator | Description | Example
 | ------- | ----------- | -----
-|eq (equals)| Compares two values to be equal or not.| A ieq B will give false
+|eq (equals)| Compares two values to be equal or not.| A -eq B will give false
+|ne (not equals) ||
+|gt (greater than)||
+|ge (greater than or equals to)||
+|lt (less than)||
+|le (less than or equals to)||
 
 ### Looping
 
