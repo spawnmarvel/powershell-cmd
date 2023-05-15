@@ -124,13 +124,17 @@ Get-Variable a,b
 # b
 
 # Get all services where name starts with W
+
 $a = Get-Service -Name W* | Write-Output
-# Get the type
-Write-Host $a.GetType()
-# Iterate over result
-foreach($element in $a) {$element}
-# Iterate over name
-foreach($element in $a) {$element.Name}
+foreach($element in $a) {
+
+ if($element.Name -eq "WinRM") {
+  Write-Host $element.Name
+  }
+  else {
+  #
+  }
+  }
 
 ```
 
