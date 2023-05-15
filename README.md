@@ -110,6 +110,11 @@ Get-Service | Sort-Object -property Status
 
 # Output dir to text
 "File-content" | Out-File out.txt
+
+# Write-Output sends the output to the pipeline. From there it can be piped to another cmdlet or assigned to a variable. 
+$a = 'Testing Write-OutPut'  | Write-Output
+$b = 'Testing Write-Host' | Write-Host
+Get-Variable a,b
 ```
 
 ### about_Pipelines
