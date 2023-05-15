@@ -131,6 +131,7 @@ Write-Host $a.GetType()
 foreach($element in $a) {
 
  if($element.Name -eq "WinRM") {
+   # do stuff with match
   Write-Host $element.Name
   }
   else {
