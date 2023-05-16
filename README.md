@@ -194,14 +194,37 @@ Text, XML, CSV, HTML
 https://www.tutorialspoint.com/powershell/powershell_files_io.htm
 
 ### Functions
+If you edit a function, clear the session or start a new terminal.
+
 ```ps1
-# Funtion
-Function Add-LogOut($txt) {
-    Add-Content log.txt $txt
+
+
+
+# Function 1
+function Get-Version {
+    $PSVersionTable.PSVersion
+}
+# Call it
+Get-Version
+
+# Conflict with for example Get-Version, add prefix "PS".
+function Get-PSVersion {
+    $PSVersionTable.PSVersion
 }
 
+# There is still a good change you could end up with a naming conflict, choose a standard and stick with it.
+function Get-CustPSVersion {
+    $PSVersionTable.PSVersion
+}
+# Funtion example
+Function Add-CustPSLogOut {
+    param (
+        [string]$ParameterText
+    )
+    Add-Content log.txt $ParameterText
+}
 # Call it
-Add-LogOut("Log1")
+Add-CustPSLogOut("Log1")
 ```
 Naming
 * Pascal case, name with an approved verb and a singular noun
