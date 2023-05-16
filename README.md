@@ -224,7 +224,7 @@ Function Add-CustPSLogOut {
     Add-Content log.txt $ParameterText
 }
 # Call it
-Add-CustPSLogOut("Log1")
+Add-CustPSLogOut("say something to log")
 ```
 Naming
 * Pascal case, name with an approved verb and a singular noun
