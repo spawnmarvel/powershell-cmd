@@ -48,6 +48,13 @@ A cmdlet is a PowerShell command with a predefined function, similar to an opera
 * Out — To output something
 * New — To create something (“new” is not a verb, of course, but it functions as one)
 
+
+### The Three Core Cmdlets in PowerShell
+
+* Get-Command
+* Get-Help
+* Get-Member
+
 Good news — you don’t need to memorize all cmdlets, use Get-Command
 
 ```ps1
