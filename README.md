@@ -228,7 +228,7 @@ https://www.tutorialspoint.com/powershell/powershell_scripting.htm
 |$HOME     | C:\Users\jekl
 |$PSITEM   | Same as $_. Contains the current object in the pipeline object.
 |[...]|
-|$NULL     | $null is an automatic variable that contains a NULL or empty value. You can use this variable to represent an absent or undefined value in commands and scripts.
+|$NULL     | $null is an automatic variable that contains a NULL or empty value. You can use this variable to represent an absent or undefined value in commands and scripts. https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-null?view=powershell-7.3
 |[...]|
 
 
