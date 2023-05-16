@@ -59,6 +59,8 @@ https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/02-help-syste
 
 Good news — you don’t need to memorize all cmdlets, use Get-Command
 
+Get-Command:
+
 ```ps1
 Get-Command
 # CommandType     Name                                               Version    Source
@@ -66,6 +68,8 @@ Get-Command
 # Alias           Add-AdlAnalyticsDataSource                         1.0.2      Az.DataLakeAnalytics
 # [...]
 ```
+Get-Help:
+
 The Get-Help cmdlet displays information about PowerShell concepts and commands, including cmdlets, functions, Common Information Model (CIM) commands, workflows, providers, aliases, and scripts.
 
 ```ps1
@@ -78,6 +82,7 @@ Get-Help Get-Service
 #    >] [<CommonParameters>]
 # [...]
 ```
+Get-Member:
 
 If you forget a cmdlet’s parameters, use cmdlet | Get-Member, which will display the parameters for the Get-Process cmdlet:
 ```ps1
