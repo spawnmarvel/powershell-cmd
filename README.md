@@ -202,6 +202,24 @@ Text, XML, CSV, HTML
 
 https://www.tutorialspoint.com/powershell/powershell_files_io.htm
 
+```ps1
+function Get-MrParameterCount {
+    param (
+        [string[]]$ParameterName
+    )
+
+    foreach ($Parameter in $ParameterName) {
+        $Results = Get-Command -ParameterName $Parameter -ErrorAction SilentlyContinue
+
+        [pscustomobject]@{
+            ParameterName = $Parameter
+            NumberOfCmdlets = $Results.Count
+        }
+    }
+}
+```
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/09-functions?view=powershell-7.3
+
 ### Advanced CMDlets
 
 ```ps1
@@ -483,6 +501,10 @@ Import-Module .\do_make_mdoule\custom_module.psm1
 Add-LogOut("Log1")
 
 ```
+
+How do you create a script module?
+
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/10-script-modules?view=powershell-7.3
 
 ## Powershell 101 Microsoft
 
