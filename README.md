@@ -194,7 +194,7 @@ Text, XML, CSV, HTML
 https://www.tutorialspoint.com/powershell/powershell_files_io.htm
 
 ### Functions
-If you edit a function, clear the session or start a new terminal.
+Note: If you edit a function, clear the session or start a new terminal.
 
 ```ps1
 
