@@ -202,6 +202,10 @@ Text, XML, CSV, HTML
 
 https://www.tutorialspoint.com/powershell/powershell_files_io.htm
 
+Why did I use ComputerName and not Computer, ServerName, or Host for my parameter name? It's because I wanted my function standardized like the default cmdlets.
+
+I'll create a function to query all of the commands on a system and return the number of them that have specific parameter names.
+
 ```ps1
 function Get-MrParameterCount {
     param (
