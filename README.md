@@ -470,6 +470,9 @@ Add-LogOut("Log1")
 
 ```
 
+## Powershell 101 Microsoft
+
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.3
 
 ## Linux / BASH, Not a tutorial
 

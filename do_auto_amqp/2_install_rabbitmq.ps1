@@ -56,7 +56,7 @@ else {
 # Add base to path
 $env_rmq_base_home = [System.Environment]::GetEnvironmentVariable($env_rmq_base, "Machine")
 
-if ($null -eq $env_rmq_base_home) 
+if ($env_rmq_base_home -eq $null) 
 {
    Write-Host "Adding to path: " $env_rmq_base
    Write-Host $env_rmq_dir
@@ -72,7 +72,7 @@ else {
 # Add conf to path
 $env_rmq_conf_home = [System.Environment]::GetEnvironmentVariable($env_rmq_conf, "Machine")
 
-if ($null -eq $env_rmq_conf_home) 
+if ($env_rmq_conf_home -eq $null) 
 {
    Write-Host "Adding to path: " $env_rmq_conf
    $tmp_conf = $env_rmq_dir + "\rabbitmq.conf"
@@ -88,7 +88,7 @@ else {
 # Add adv conf to path
 $env_rmq_conf_adv_home = [System.Environment]::GetEnvironmentVariable($env_rmq_conf_adv, "Machine")
 
-if ($null -eq $env_rmq_conf_adv_home) 
+if ($env_rmq_conf_adv_home -eq $null) 
 {
    Write-Host "Adding to path: " $env_rmq_conf_adv
    $tmp_conf_adv = $env_rmq_dir + "\advanced.config"

@@ -3,7 +3,7 @@
 Write-Host "#### V1.0 Install Erlang and set path or verify it, .exe must be in same folder as the script. RUN AS ADMIN"
 
 $erlangkey = Get-ChildItem HKLM:\SOFTWARE\Wow6432Node\Ericsson\Erlang -ErrorAction SilentlyContinue
-if ($null -eq $erlangkey ) { 
+if ($erlangkey -eq $newpath ) { 
     Write-Host "Erlang not found, need to install it"
     Start-Process -Wait C:\install\otp_win64_25.1.exe /S
      Write-Host "Erlang is now installed" # 20.11.2022 success
