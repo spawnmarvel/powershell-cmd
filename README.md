@@ -222,8 +222,13 @@ https://www.tutorialspoint.com/powershell/powershell_scripting.htm
 |$$        | Represents the last token in the last line received by the session.
 |$?        | Represents the execution status of the last operation. It contains TRUE if the last operation succeeded and FALSE if it failed.
 |$_        | Same as $PSItem. Contains the current object in the pipeline object. You can use this variable in commands that perform an action on every object or on selected objects in a pipeline.
+|$ARGS     | Represents an array of the undeclared parameters and/or parameter values that are passed to a function, script, or script block.
+|$FALSE    | Represents FALSE. You can use this variable to represent FALSE in commands and scripts instead of using the string "false".
+|[...]|
 |$HOME     | C:\Users\jekl
 |$PSITEM   | Same as $_. Contains the current object in the pipeline object.
+|[...]|
+|$NULL     | $null is an automatic variable that contains a NULL or empty value. You can use this variable to represent an absent or undefined value in commands and scripts.
 |[...]|
 
 
