@@ -55,6 +55,8 @@ A cmdlet is a PowerShell command with a predefined function, similar to an opera
 * Get-Help
 * Get-Member
 
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.3
+
 Good news — you don’t need to memorize all cmdlets, use Get-Command
 
 ```ps1
