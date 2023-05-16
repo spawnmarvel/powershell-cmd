@@ -181,18 +181,9 @@ https://www.tutorialspoint.com/powershell/powershell_files_folders.htm
 
 https://www.tutorialspoint.com/powershell/powershell_dates_timers.htm
 
-### Files/IO and function
+### Files/IO
 
 ```ps1
-
-# Funtion
-Function Add-LogOut($txt) {
-    Add-Content log.txt $txt
-}
-
-# Call it
-Add-LogOut("Log1")
-
 # Read XML
 Get-Content test.xml 
 
@@ -201,6 +192,21 @@ Get-Content test.xml
 Text, XML, CSV, HTML
 
 https://www.tutorialspoint.com/powershell/powershell_files_io.htm
+
+### Functions
+```ps1
+# Funtion
+Function Add-LogOut($txt) {
+    Add-Content log.txt $txt
+}
+
+# Call it
+Add-LogOut("Log1")
+```
+Naming
+* Pascal case, name with an approved verb and a singular noun
+* In PowerShell, there's a specific list of approved verbs that can be obtained by running Get-Verb.
+* Get-Verb | Sort-Object -Property Verb
 
 Why did I use ComputerName and not Computer, ServerName, or Host for my parameter name? It's because I wanted my function standardized like the default cmdlets.
 
