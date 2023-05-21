@@ -294,6 +294,8 @@ https://www.tutorialspoint.com/powershell/powershell_scripting.htm
 
 https://www.tutorialspoint.com/powershell/powershell_special_variables.htm
 
+
+
 ### Operators
 
 https://www.tutorialspoint.com/powershell/powershell_operators.htm
@@ -306,6 +308,24 @@ https://www.tutorialspoint.com/powershell/powershell_operators.htm
 |ge (greater than or equals to)||
 |lt (less than)||
 |le (less than or equals to)||
+
+Matching
+
+* -like, -ilike, -clike - string matches wildcard pattern
+* -notlike, -inotlike, -cnotlike - string doesn't match wildcard pattern
+* -match, -imatch, -cmatch - string matches regex pattern
+* -notmatch, -inotmatch, -cnotmatch - string doesn't match regex pattern
+
+Replacement
+* -replace, -ireplace, -creplace - replaces strings matching a regex pattern
+
+Containment
+* -contains, -icontains, -ccontains - collection contains a value
+* -notcontains, -inotcontains, -cnotcontains - collection doesn't contain a value
+* -in - value is in a collection
+* -notin - value isn't in a collection
+
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.3
 
 ### Looping
 
