@@ -225,17 +225,7 @@ Function Add-CustPSLogOut {
 }
 # Call it
 Add-CustPSLogOut("say something to log")
-```
-Naming
-* Pascal case, name with an approved verb and a singular noun
-* In PowerShell, there's a specific list of approved verbs that can be obtained by running Get-Verb.
-* Get-Verb | Sort-Object -Property Verb
 
-Why did I use ComputerName and not Computer, ServerName, or Host for my parameter name? It's because I wanted my function standardized like the default cmdlets.
-
-I'll create a function to query all of the commands on a system and return the number of them that have specific parameter names.
-
-```ps1
 function Get-MrParameterCount {
     param (
         [string[]]$ParameterName
@@ -251,6 +241,11 @@ function Get-MrParameterCount {
     }
 }
 ```
+Naming
+* Pascal case, name with an approved verb and a singular noun
+* In PowerShell, there's a specific list of approved verbs that can be obtained by running Get-Verb.
+* Get-Verb | Sort-Object -Property Verb
+
 https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/09-functions?view=powershell-7.3
 
 ### Advanced CMDlets
