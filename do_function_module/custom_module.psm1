@@ -21,14 +21,18 @@ Function Add-CustPSLogErrorOut {
     Add-Content log.txt $rv
 }
 
-function Get-CustPSServices {
+function Get-CustPSProcess {
     param (
         [string]$ParameterText
     )
     
         $ParameterTextTemp = -join($ParameterText, "*")
-        $rv = Get-Service | where-Object {$_.Status -eq "Stopped" -AND $_.Name -like $ParameterTextTemp}
-        Add-Content log_service.txt $rv
+        $TempData =  Get-Process | where-Object {$_.ProcessName -like "$ParameterTextTemp"}
+        $rv = ""
+        foreach ($item in $TempData) {
+            $rv = -join($item.ProcessName,":", $item.Id)
+        }
+        Add-Content log_process.txt $rv
         
 }
 
