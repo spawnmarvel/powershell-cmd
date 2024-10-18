@@ -2,7 +2,7 @@
 # dir
 $file_path = "c:\temp\a_file.json"
 $content = Get-Content $file_path # -Raw
-Write-Host $text
+Write-Host $content
 
 # Replace 'oldText' with 'newText' in a string
 $string_current = "Red"
