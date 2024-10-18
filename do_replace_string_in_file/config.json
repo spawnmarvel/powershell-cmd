@@ -1,0 +1,22 @@
+{
+    "main":  {
+                 "id":  "2",
+                 "value":  "File",
+                 "tags":  {
+                              "taglist":  [
+                                              {
+                                                  "value":  "tag1",
+                                                  "info":  "123456"
+                                              },
+                                              {
+                                                  "value":  "tag2",
+                                                  "info":  "123456"
+                                              },
+                                              {
+                                                  "value":  "tag3",
+                                                  "info":  "000000"
+                                              }
+                                          ]
+                          }
+             }
+}
